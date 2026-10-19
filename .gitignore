@@ -1,17 +1,28 @@
+# Dependensi dan hasil build
 node_modules/
 .next/
 dist/
+*.tsbuildinfo
+.turbo/
+.vercel/
+.cache/
+
+# Konfigurasi lokal dan rahasia; file contoh tetap boleh di-commit
 .env
-.env.production
 .env.*
 !.env.example
 !**/.env.example
+
+# Log, laporan pengujian, dan cache alat
 *.log
-.DS_Store
+.eslintcache
 coverage/
+.nyc_output/
 playwright-report/
 test-results/
 **/playwright/.auth/
+
+# Berkas kerja lokal dan hasil ekspor sementara
 .codex-presentations/
 .codex-finalizer/
 .codex-image-edit/
@@ -20,3 +31,9 @@ output/
 backups/
 *.dump
 *.dump.enc
+
+# Berkas sistem operasi dan editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
