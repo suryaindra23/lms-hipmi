@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #161d1d;
+  --brand-navy: #172222;
+  --brand-navy-deep: #101818;
+  --brand-orange: #377c78;
+  --brand-orange-dark: #286864;
+  --brand-ivory: #ffffff;
+  --primary-yellow: #b9d9d4;
+  --primary-orange: #377c78;
+  --dark-orange: #286864;
+  --soft-yellow: #edf5f3;
+  --soft-orange: #dbece8;
+  --muted: #697576;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #101a1a;
+  --foreground: #edf5f3;
+  --soft-yellow: #19332f;
+  --soft-orange: #244843;
+  --muted: #a4b8b4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta-sans);
+  --color-slate-950: #101818;
+  --color-slate-900: #172222;
+  --color-slate-800: #293535;
+  --color-slate-700: #425050;
+  --color-slate-600: #657273;
+  --color-slate-500: #788687;
+  --color-slate-400: #9ca8a7;
+  --color-slate-300: #c1ccca;
+  --color-slate-200: #dfe7e5;
+  --color-slate-100: #edf3f1;
+  --color-slate-50: #f6f9f8;
+  --color-orange-800: #205854;
+  --color-orange-700: #286864;
+  --color-orange-600: #377c78;
+  --color-orange-500: #4a918b;
+  --color-orange-400: #67aaa3;
+  --color-orange-300: #98c7c0;
+  --color-orange-200: #c5e1dc;
+  --color-orange-100: #e4f1ee;
+  --color-orange-50: #f1f8f6;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+* {
+  border-color: color-mix(in srgb, var(--soft-yellow) 72%, white);
+}
+
+::selection {
+  background: var(--soft-orange);
+  color: var(--foreground);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary-orange) 50%, transparent);
+  outline-offset: 3px;
+}
+
+.bg-sunrise {
+  background: var(--primary-orange);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.font-editorial {
+  font-family: var(--font-jakarta-sans), system-ui, sans-serif;
+  font-style: normal !important;
+  font-weight: 800;
+}
+
+.public-site h1,
+.public-site h2 {
+  text-wrap: balance;
+}
+
+.public-site section[id] {
+  scroll-margin-top: 6rem;
+}
+
+.public-site :is(a, button)[class*="rounded-md"] {
+  border-radius: 9999px;
+}
+
+.dashboard-shell nav a {
+  border-radius: 9999px;
+}
+
+.dashboard-shell :is(input:not([type="checkbox"]), select, textarea) {
+  border-radius: 0.875rem;
+}
+
+.dashboard-shell :is(a, button)[class*="bg-orange-600"],
+.dashboard-shell :is(a, button)[class*="bg-slate-900"],
+.dashboard-shell :is(a, button)[class*="bg-slate-950"] {
+  border-radius: 9999px;
+}
+
+.dashboard-shell :is(article, section)[class*="shadow"] {
+  box-shadow: none;
+}
+
+.lead-form-panel input,
+.lead-form-panel select,
+.lead-form-panel textarea {
+  border-radius: 0.875rem;
+  border-color: color-mix(in srgb, #0f172a 20%, transparent);
+  background: white;
+}
+
+.lead-form-panel input:focus,
+.lead-form-panel select:focus,
+.lead-form-panel textarea:focus {
+  border-color: #377c78;
+  box-shadow: 0 0 0 3px rgb(55 124 120 / 12%);
+}
+
+.form-control {
+  min-height: 44px;
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--muted) 28%, transparent);
+  border-radius: 0.75rem;
+  background: white;
+  padding: 0.625rem 0.75rem;
+  color: var(--foreground);
+  font-size: 0.875rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-orange);
+  outline: none;
+}
+
+/* Keep legacy brand utilities readable while all pages adopt the teal palette. */
+html:not(.dark) .text-orange-600 {
+  color: #286864 !important;
+}
+
+html:not(.dark) .bg-\[\#FFFDF8\] {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) .text-\[\#1F2937\] {
+  color: var(--foreground) !important;
+}
+
+html:not(.dark) .text-\[\#64748B\] {
+  color: var(--muted) !important;
+}
+
+.dark body,
+.dark .bg-\[\#FFFDF8\],
+.dark .bg-\[\#FFFFFF\],
+.dark .bg-\[\#F6F8FB\],
+.dark .bg-\[\#F8FAFC\] {
+  background-color: #101a1a !important;
+}
+
+.dark .bg-white {
+  background-color: #172625 !important;
+}
+
+.dark .bg-slate-50,
+.dark .bg-slate-100,
+.dark .bg-gray-50 {
+  background-color: #1d302e !important;
+}
+
+.dark .bg-orange-50,
+.dark .bg-amber-50,
+.dark .bg-\[\#EDF5F3\],
+.dark .bg-\[\#F1F8F6\],
+.dark .bg-\[\#FFF7ED\] {
+  background-color: #19332f !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-950,
+.dark .text-\[\#1F2937\] {
+  color: #f8fafc !important;
+}
+
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark .text-\[\#64748B\] {
+  color: #c2d1ce !important;
+}
+
+.dark .text-orange-700,
+.dark .text-orange-600 {
+  color: #9bcfc7 !important;
+}
+
+.dark .text-slate-500,
+.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.dark .form-control,
+.dark input,
+.dark textarea,
+.dark select {
+  border-color: #3b5a55;
+  background-color: #101a1a;
+  color: #edf5f3;
+}
+
+.dark .border-\[\#FEF3C7\],
+.dark .border-orange-100,
+.dark .border-amber-100,
+.dark .border-slate-100,
+.dark .border-slate-200 {
+  border-color: #344c48 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

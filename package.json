@@ -1,0 +1,40 @@
+{
+  "name": "lms-hipmi",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint --workspace apps/api && npm run lint --workspace apps/web",
+    "typecheck": "npm run lint",
+    "test": "npm run test --workspace apps/api",
+    "test:e2e": "npm run test:e2e --workspace apps/web",
+    "build": "npm run build --workspace apps/api && npm run build --workspace apps/web",
+    "seed:learning-materials": "tsx prisma/seed-learning-materials.ts",
+    "format:check": "git diff --check -- . ':!node_modules' ':!apps/web/node_modules'",
+    "prisma:validate": "npx prisma validate && npx prisma migrate status",
+    "repo:hygiene": "node scripts/check-repository-hygiene.mjs",
+    "smoke:roles": "node scripts/smoke-role-access.mjs",
+    "release:check": "npm run repo:hygiene && npm run verify && npm audit --audit-level=high && docker compose config --quiet",
+    "verify": "npm run format:check && npm run prisma:validate && npm run lint && npm test && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^26.1.2",
+    "bcryptjs": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.5",
+    "typescript": "^5.9.3"
+  }
+}

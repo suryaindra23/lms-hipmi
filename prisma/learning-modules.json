@@ -1,0 +1,398 @@
+[
+  {
+    "position": 1,
+    "slug": "fondasi-usaha-digital",
+    "title": "Fondasi Usaha Digital",
+    "description": "Mengenali masalah pelanggan dan mengubahnya menjadi ide usaha yang jelas.",
+    "lessonTitle": "Masalah, pelanggan, dan nilai usaha",
+    "summary": "Murid memetakan masalah nyata, calon pelanggan, dan manfaat utama produk.",
+    "minutes": 35,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Menjelaskan masalah pelanggan dengan kalimat yang spesifik",
+      "Membedakan produk, manfaat, dan alasan pelanggan membeli",
+      "Menyusun satu ide usaha yang dapat diuji di lingkungan sekolah"
+    ],
+    "concepts": [
+      { "title": "Masalah", "body": "Pilih keluhan yang benar-benar dialami orang, bukan sekadar ide produk yang terlihat menarik." },
+      { "title": "Pelanggan", "body": "Tentukan siapa yang paling sering mengalami masalah itu dan kapan masalah muncul." },
+      { "title": "Nilai", "body": "Jelaskan perubahan yang pelanggan rasakan setelah memakai produk atau layanan." }
+    ],
+    "practiceTitle": "Peta peluang di sekitar sekolah",
+    "practiceSteps": [
+      "Amati tiga masalah yang sering muncul di sekolah atau lingkungan rumah.",
+      "Pilih satu masalah yang paling sering terjadi.",
+      "Tulis calon pelanggan dan manfaat yang mereka butuhkan.",
+      "Uji kalimat ide usaha kepada dua teman dan catat tanggapannya."
+    ],
+    "questions": [
+      "Masalah apa yang ingin diselesaikan?",
+      "Siapa yang paling membutuhkan solusi ini?",
+      "Manfaat apa yang membuat pelanggan mau mencoba?"
+    ],
+    "takeaway": "Ide usaha yang kuat berawal dari masalah yang jelas dan pelanggan yang nyata."
+  },
+  {
+    "position": 2,
+    "slug": "riset-pasar-sederhana",
+    "title": "Riset Pasar Sederhana",
+    "description": "Mengumpulkan bukti kebutuhan pelanggan melalui observasi dan wawancara singkat.",
+    "lessonTitle": "Mengenal pelanggan melalui riset",
+    "summary": "Murid membuat pertanyaan netral dan merangkum pola jawaban calon pelanggan.",
+    "minutes": 40,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Membuat pertanyaan wawancara yang tidak menggiring jawaban",
+      "Mencatat perilaku dan kebutuhan pelanggan secara terstruktur",
+      "Menentukan temuan yang layak dipakai untuk keputusan produk"
+    ],
+    "concepts": [
+      { "title": "Observasi", "body": "Perhatikan apa yang orang lakukan, kapan mereka kesulitan, dan solusi apa yang sudah mereka coba." },
+      { "title": "Wawancara", "body": "Tanyakan pengalaman terakhir. Hindari pertanyaan yang hanya menghasilkan jawaban ya atau tidak." },
+      { "title": "Pola", "body": "Temuan menjadi berguna ketika jawaban serupa muncul dari beberapa orang." }
+    ],
+    "practiceTitle": "Lima wawancara pelanggan",
+    "practiceSteps": [
+      "Tentukan satu kelompok calon pelanggan.",
+      "Siapkan lima pertanyaan tentang pengalaman mereka.",
+      "Wawancarai lima orang tanpa menawarkan produk terlebih dahulu.",
+      "Kelompokkan jawaban menjadi masalah, kebiasaan, dan harapan."
+    ],
+    "questions": [
+      "Pertanyaan mana yang menghasilkan cerita paling lengkap?",
+      "Masalah apa yang muncul berulang kali?",
+      "Temuan apa yang mengubah ide awal?"
+    ],
+    "takeaway": "Riset pasar membantu murid memilih berdasarkan bukti, bukan tebakan."
+  },
+  {
+    "position": 3,
+    "slug": "identitas-merek",
+    "title": "Identitas Merek",
+    "description": "Membangun nama, karakter, dan tampilan usaha yang mudah dikenali.",
+    "lessonTitle": "Nama dan karakter merek",
+    "summary": "Murid menyusun identitas merek yang konsisten dengan pelanggan dan produk.",
+    "minutes": 35,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Menentukan karakter merek yang sesuai dengan pelanggan",
+      "Membuat nama usaha yang mudah dibaca dan diingat",
+      "Memakai warna dan gaya bahasa secara konsisten"
+    ],
+    "concepts": [
+      { "title": "Posisi", "body": "Merek perlu menjawab siapa yang dilayani dan alasan produk pantas dipilih." },
+      { "title": "Karakter", "body": "Pilih sifat yang terasa nyata, misalnya ramah, praktis, atau berani." },
+      { "title": "Konsistensi", "body": "Gunakan nama, warna, foto, dan gaya bahasa yang seragam di setiap kanal." }
+    ],
+    "practiceTitle": "Papan identitas merek",
+    "practiceSteps": [
+      "Tulis tiga pilihan nama usaha.",
+      "Pilih dua sifat yang menggambarkan merek.",
+      "Tentukan dua warna utama dan satu gaya bahasa.",
+      "Minta tiga orang menyebut kesan pertama mereka."
+    ],
+    "questions": [
+      "Apakah nama mudah dibaca dalam sekali lihat?",
+      "Apakah karakter merek sesuai dengan pelanggan?",
+      "Bagian mana yang masih terasa tidak konsisten?"
+    ],
+    "takeaway": "Identitas yang konsisten membuat usaha lebih mudah dikenali dan dipercaya."
+  },
+  {
+    "position": 4,
+    "slug": "produk-dan-penawaran",
+    "title": "Produk dan Penawaran",
+    "description": "Menyusun produk, harga, dan penawaran yang mudah dipahami pelanggan.",
+    "lessonTitle": "Manfaat produk dan struktur penawaran",
+    "summary": "Murid mengubah fitur produk menjadi manfaat dan menulis penawaran yang jelas.",
+    "minutes": 40,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Menjelaskan manfaat produk dari sudut pandang pelanggan",
+      "Menghitung biaya dasar sebelum menentukan harga",
+      "Menyusun penawaran tanpa klaim berlebihan"
+    ],
+    "concepts": [
+      { "title": "Fitur dan manfaat", "body": "Fitur menjelaskan isi produk. Manfaat menjelaskan perubahan yang pelanggan dapatkan." },
+      { "title": "Harga", "body": "Harga perlu menutup biaya dan tetap masuk akal bagi pelanggan yang dituju." },
+      { "title": "Penawaran", "body": "Sebutkan produk, manfaat, harga, cara membeli, dan batasan dengan jelas." }
+    ],
+    "practiceTitle": "Kartu penawaran satu halaman",
+    "practiceSteps": [
+      "Daftar seluruh biaya untuk menghasilkan satu produk.",
+      "Tulis tiga fitur lalu ubah menjadi manfaat pelanggan.",
+      "Tentukan harga dan alasan penetapannya.",
+      "Susun penawaran satu halaman dan uji keterbacaannya."
+    ],
+    "questions": [
+      "Manfaat utama apa yang paling penting bagi pelanggan?",
+      "Apakah harga sudah mempertimbangkan seluruh biaya?",
+      "Informasi apa yang masih membuat calon pembeli ragu?"
+    ],
+    "takeaway": "Penawaran yang baik menjelaskan manfaat, harga, dan cara membeli tanpa membingungkan pelanggan."
+  },
+  {
+    "position": 5,
+    "slug": "konten-promosi",
+    "title": "Konten Promosi",
+    "description": "Merencanakan konten yang membantu pelanggan memahami produk.",
+    "lessonTitle": "Tujuan dan struktur konten",
+    "summary": "Murid membuat konten promosi dengan tujuan, pesan, dan ajakan yang jelas.",
+    "minutes": 40,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Menentukan satu tujuan untuk setiap konten",
+      "Menyusun pembuka yang relevan dengan masalah pelanggan",
+      "Menulis ajakan yang sesuai dengan tahap keputusan pelanggan"
+    ],
+    "concepts": [
+      { "title": "Tujuan", "body": "Satu konten sebaiknya berfokus pada mengenalkan, menjelaskan, atau mengajak membeli." },
+      { "title": "Pesan", "body": "Gunakan satu gagasan utama agar pelanggan cepat memahami isi konten." },
+      { "title": "Ajakan", "body": "Tutup dengan tindakan yang masuk akal, seperti bertanya, menyimpan, atau membeli." }
+    ],
+    "practiceTitle": "Kalender konten tujuh hari",
+    "practiceSteps": [
+      "Pilih satu tujuan konten untuk setiap hari.",
+      "Tentukan masalah pelanggan yang akan dibahas.",
+      "Tulis pembuka dan pesan utama dalam dua kalimat.",
+      "Tambahkan ajakan yang sesuai dengan isi konten."
+    ],
+    "questions": [
+      "Apakah setiap konten hanya memiliki satu tujuan?",
+      "Apakah pembuka berhubungan dengan masalah pelanggan?",
+      "Apakah ajakan terasa wajar setelah membaca konten?"
+    ],
+    "takeaway": "Konten promosi membantu pelanggan memahami produk sebelum meminta mereka membeli."
+  },
+  {
+    "position": 6,
+    "slug": "foto-dan-video-produk",
+    "title": "Foto dan Video Produk",
+    "description": "Menghasilkan visual produk yang jelas dengan peralatan sederhana.",
+    "lessonTitle": "Visual produk dengan ponsel",
+    "summary": "Murid menata cahaya, sudut, dan urutan video agar produk mudah dinilai.",
+    "minutes": 45,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Menggunakan cahaya alami untuk menampilkan produk dengan jelas",
+      "Memilih sudut foto yang menunjukkan detail penting",
+      "Menyusun video pendek dengan alur yang mudah diikuti"
+    ],
+    "concepts": [
+      { "title": "Cahaya", "body": "Letakkan produk dekat jendela dan hindari bayangan keras yang menutup detail." },
+      { "title": "Komposisi", "body": "Gunakan latar sederhana dan sisakan ruang agar produk menjadi pusat perhatian." },
+      { "title": "Urutan video", "body": "Tampilkan masalah, penggunaan produk, hasil, lalu informasi pembelian." }
+    ],
+    "practiceTitle": "Satu produk, lima visual",
+    "practiceSteps": [
+      "Siapkan latar yang bersih dan cahaya dari samping.",
+      "Ambil foto depan, detail, ukuran, penggunaan, dan hasil.",
+      "Rekam video 20 sampai 30 detik dengan urutan yang jelas.",
+      "Periksa kembali agar tidak ada data pribadi di dalam gambar."
+    ],
+    "questions": [
+      "Apakah detail produk terlihat tanpa memperbesar gambar?",
+      "Apakah warna produk tampak mendekati kondisi asli?",
+      "Apakah video menjelaskan cara penggunaan dengan cepat?"
+    ],
+    "takeaway": "Visual yang terang dan jujur membantu pelanggan menilai produk dengan percaya diri."
+  },
+  {
+    "position": 7,
+    "slug": "copywriting-dasar",
+    "title": "Copywriting Dasar",
+    "description": "Menulis judul dan deskripsi produk yang jelas, jujur, dan mudah dicari.",
+    "lessonTitle": "Judul dan deskripsi yang membantu pembeli",
+    "summary": "Murid menulis informasi produk dengan bahasa pelanggan dan bukti yang relevan.",
+    "minutes": 35,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Menulis judul produk yang spesifik dan mudah dipahami",
+      "Menyusun deskripsi berdasarkan kebutuhan pelanggan",
+      "Menghindari klaim yang tidak dapat dibuktikan"
+    ],
+    "concepts": [
+      { "title": "Judul", "body": "Masukkan nama produk, ciri utama, dan konteks penggunaan tanpa menumpuk kata." },
+      { "title": "Deskripsi", "body": "Mulai dari manfaat utama, lalu jelaskan isi, ukuran, cara pakai, dan batasan." },
+      { "title": "Bukti", "body": "Gunakan bahan, ukuran, proses, atau hasil uji yang dapat diperiksa." }
+    ],
+    "practiceTitle": "Perbaikan halaman produk",
+    "practiceSteps": [
+      "Pilih satu produk yang sudah memiliki deskripsi.",
+      "Tandai bagian yang masih umum atau sulit dipahami.",
+      "Tulis ulang judul dan deskripsi dengan informasi yang terukur.",
+      "Minta teman menemukan harga, manfaat, dan cara pakai dalam 30 detik."
+    ],
+    "questions": [
+      "Apakah judul menjelaskan produk tanpa kata berlebihan?",
+      "Apakah pembeli dapat menemukan informasi penting dengan cepat?",
+      "Apakah setiap klaim memiliki bukti yang jelas?"
+    ],
+    "takeaway": "Copywriting yang kuat memudahkan pelanggan mengambil keputusan berdasarkan informasi yang jelas."
+  },
+  {
+    "position": 8,
+    "slug": "toko-digital-aman",
+    "title": "Toko Digital yang Aman",
+    "description": "Menyiapkan profil, katalog, pembayaran, dan operasional toko tanpa membuka data sensitif.",
+    "lessonTitle": "Profil dan operasional toko",
+    "summary": "Murid menyiapkan toko digital yang rapi sekaligus menjaga keamanan akun.",
+    "minutes": 45,
+    "minimumPlan": "FREE",
+    "objectives": [
+      "Melengkapi profil dan katalog toko secara konsisten",
+      "Memisahkan informasi publik dari data akun yang sensitif",
+      "Menetapkan alur pesanan dan layanan pelanggan"
+    ],
+    "concepts": [
+      { "title": "Profil", "body": "Gunakan nama, deskripsi, jam layanan, dan kontak bisnis yang konsisten." },
+      { "title": "Operasional", "body": "Tentukan stok, waktu proses, pengiriman, dan cara menangani pertanyaan pelanggan." },
+      { "title": "Keamanan", "body": "Jangan membagikan kata sandi, PIN, OTP, cookie, atau data pembayaran pribadi." }
+    ],
+    "practiceTitle": "Audit kesiapan toko",
+    "practiceSteps": [
+      "Periksa kelengkapan profil dan katalog.",
+      "Uji alur pesanan dari pertanyaan sampai pengiriman.",
+      "Aktifkan verifikasi akun yang tersedia.",
+      "Ambil bukti layar setelah memastikan data sensitif tidak terlihat."
+    ],
+    "questions": [
+      "Apakah pelanggan memahami cara memesan?",
+      "Apakah stok dan waktu proses sesuai kemampuan?",
+      "Apakah bukti praktik bebas dari data sensitif?"
+    ],
+    "takeaway": "Toko yang rapi perlu didukung alur kerja yang jelas dan kebiasaan menjaga keamanan akun."
+  },
+  {
+    "position": 9,
+    "slug": "promosi-media-sosial",
+    "title": "Promosi Media Sosial",
+    "description": "Memilih kanal, jadwal, dan cara berinteraksi yang sesuai dengan pelanggan.",
+    "lessonTitle": "Kanal dan ritme promosi",
+    "summary": "Murid menyusun rencana promosi yang realistis dan mengukur respons pelanggan.",
+    "minutes": 45,
+    "minimumPlan": "MEDIUM",
+    "objectives": [
+      "Memilih kanal berdasarkan kebiasaan calon pelanggan",
+      "Menyusun jadwal publikasi yang dapat dijalankan secara konsisten",
+      "Mencatat respons untuk memperbaiki konten berikutnya"
+    ],
+    "concepts": [
+      { "title": "Kanal", "body": "Pilih tempat pelanggan benar-benar aktif. Tidak semua usaha perlu hadir di semua platform." },
+      { "title": "Ritme", "body": "Jadwal yang sederhana dan konsisten lebih berguna daripada banyak konten yang cepat berhenti." },
+      { "title": "Interaksi", "body": "Balas pertanyaan dengan cepat, sopan, dan sesuai informasi produk." }
+    ],
+    "practiceTitle": "Kampanye tujuh hari",
+    "practiceSteps": [
+      "Pilih satu kanal utama dan satu tujuan kampanye.",
+      "Siapkan tiga konten dengan pesan yang saling melengkapi.",
+      "Catat jangkauan, interaksi, pertanyaan, dan tindakan pembelian.",
+      "Bandingkan hasil lalu tentukan satu perbaikan berikutnya."
+    ],
+    "questions": [
+      "Mengapa kanal ini sesuai dengan pelanggan?",
+      "Konten mana yang menghasilkan pertanyaan paling relevan?",
+      "Perbaikan apa yang akan diuji pada kampanye berikutnya?"
+    ],
+    "takeaway": "Promosi yang efektif tumbuh dari ritme yang konsisten dan evaluasi respons pelanggan."
+  },
+  {
+    "position": 10,
+    "slug": "affiliate-marketing",
+    "title": "Affiliate Marketing",
+    "description": "Membuat konten affiliate yang jujur, relevan, dan dapat diukur.",
+    "lessonTitle": "Konten affiliate dan transparansi",
+    "summary": "Murid memilih produk, menyampaikan pengalaman, dan mencatat hasil konten affiliate.",
+    "minutes": 50,
+    "minimumPlan": "MEDIUM",
+    "objectives": [
+      "Memilih produk affiliate yang relevan dengan audiens",
+      "Menyampaikan kelebihan dan batasan produk secara jujur",
+      "Menggunakan metrik dasar untuk mengevaluasi konten"
+    ],
+    "concepts": [
+      { "title": "Kesesuaian", "body": "Produk perlu berhubungan dengan kebutuhan audiens dan dapat dijelaskan dengan pengalaman nyata." },
+      { "title": "Transparansi", "body": "Jelaskan hubungan affiliate dan hindari janji hasil yang tidak dapat dipastikan." },
+      { "title": "Pengukuran", "body": "Catat tayangan, klik, pesanan, dan pertanyaan agar keputusan berikutnya berbasis data." }
+    ],
+    "practiceTitle": "Video affiliate 30 detik",
+    "practiceSteps": [
+      "Pilih produk yang dapat diuji atau diperagakan.",
+      "Tulis naskah berdasarkan masalah, penggunaan, dan hasil.",
+      "Rekam video dengan penjelasan hubungan affiliate.",
+      "Catat metrik selama tujuh hari dan tulis evaluasinya."
+    ],
+    "questions": [
+      "Apakah produk sesuai dengan kebutuhan audiens?",
+      "Apakah konten menyebutkan batasan produk?",
+      "Metrik apa yang menunjukkan minat paling nyata?"
+    ],
+    "takeaway": "Affiliate marketing membutuhkan kepercayaan, transparansi, dan evaluasi hasil yang rutin."
+  },
+  {
+    "position": 11,
+    "slug": "analitik-dan-optimasi",
+    "title": "Analitik dan Optimasi",
+    "description": "Membaca metrik penjualan dan memilih perbaikan yang layak diuji.",
+    "lessonTitle": "Metrik untuk keputusan usaha",
+    "summary": "Murid membaca alur kunjungan sampai pembelian dan merancang satu eksperimen perbaikan.",
+    "minutes": 50,
+    "minimumPlan": "ADVANCED",
+    "objectives": [
+      "Membedakan metrik perhatian, minat, dan pembelian",
+      "Menemukan bagian alur penjualan yang paling perlu diperbaiki",
+      "Merancang eksperimen sederhana dengan ukuran keberhasilan"
+    ],
+    "concepts": [
+      { "title": "Alur", "body": "Lihat hubungan antara tayangan, kunjungan, pertanyaan, keranjang, dan pembelian." },
+      { "title": "Diagnosis", "body": "Angka yang turun di satu tahap membantu menunjukkan bagian yang perlu diperiksa." },
+      { "title": "Eksperimen", "body": "Ubah satu hal, tentukan periode uji, lalu bandingkan hasil dengan kondisi sebelumnya." }
+    ],
+    "practiceTitle": "Eksperimen perbaikan satu minggu",
+    "practiceSteps": [
+      "Kumpulkan metrik tujuh hari terakhir.",
+      "Pilih satu tahap dengan penurunan terbesar.",
+      "Tentukan satu perubahan dan ukuran keberhasilannya.",
+      "Jalankan uji selama tujuh hari lalu bandingkan hasil."
+    ],
+    "questions": [
+      "Tahap mana yang kehilangan calon pembeli paling banyak?",
+      "Perubahan tunggal apa yang sedang diuji?",
+      "Bukti apa yang cukup untuk melanjutkan perubahan?"
+    ],
+    "takeaway": "Optimasi menjadi lebih terarah ketika murid mengubah satu hal dan membandingkan hasilnya."
+  },
+  {
+    "position": 12,
+    "slug": "rencana-pertumbuhan-aman",
+    "title": "Rencana Pertumbuhan yang Aman",
+    "description": "Menyusun target, pembagian kerja, dan kontrol risiko untuk mengembangkan usaha.",
+    "lessonTitle": "Target usaha dan pengendalian risiko",
+    "summary": "Murid menyusun rencana 30 hari yang realistis, terukur, dan menjaga keamanan data.",
+    "minutes": 55,
+    "minimumPlan": "ADVANCED",
+    "objectives": [
+      "Menetapkan target usaha yang dapat diukur dalam 30 hari",
+      "Membagi kegiatan berdasarkan kapasitas waktu dan sumber daya",
+      "Menyusun kontrol untuk risiko akun, transaksi, dan layanan pelanggan"
+    ],
+    "concepts": [
+      { "title": "Target", "body": "Gunakan hasil yang dapat diperiksa, seperti jumlah pesanan, pelanggan kembali, atau waktu respons." },
+      { "title": "Kapasitas", "body": "Sesuaikan promosi dengan stok, waktu produksi, dan kemampuan melayani pelanggan." },
+      { "title": "Kontrol risiko", "body": "Tetapkan akses akun, catatan transaksi, prosedur komplain, dan cadangan data." }
+    ],
+    "practiceTitle": "Rencana usaha 30 hari",
+    "practiceSteps": [
+      "Tentukan satu target hasil dan kondisi awalnya.",
+      "Bagi kegiatan menjadi empat minggu.",
+      "Tetapkan penanggung jawab dan bukti penyelesaian.",
+      "Daftar risiko utama beserta tindakan pencegahannya."
+    ],
+    "questions": [
+      "Apakah target dapat diperiksa pada akhir 30 hari?",
+      "Apakah kapasitas usaha cukup untuk menerima pertumbuhan?",
+      "Risiko mana yang perlu dikendalikan sebelum promosi ditambah?"
+    ],
+    "takeaway": "Pertumbuhan yang sehat mengikuti kapasitas usaha dan melindungi akun, transaksi, serta pelanggan."
+  }
+]

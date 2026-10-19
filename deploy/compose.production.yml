@@ -1,0 +1,232 @@
+name: sunrise-academy
+
+x-api-environment: &api-environment
+  env_file:
+    - ../.env.production
+  environment:
+    NODE_ENV: production
+    PORT: 3000
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      DOMAIN: ${DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - edge
+    depends_on:
+      web:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    security_opt:
+      - no-new-privileges:true
+
+  web:
+    image: sunrise-academy-web:${IMAGE_TAG:-latest}
+    build:
+      context: ..
+      dockerfile: apps/web/Dockerfile
+      args:
+        API_URL: http://api:3000/api/v1
+        NEXT_PUBLIC_SITE_URL: https://${DOMAIN:-sunriseadsacademy.com}
+        NEXT_PUBLIC_STORAGE_ORIGIN: https://storage.${DOMAIN:-sunriseadsacademy.com}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      API_URL: http://api:3000/api/v1
+      NEXT_PUBLIC_SITE_URL: https://${DOMAIN:-sunriseadsacademy.com}
+      NEXT_PUBLIC_STORAGE_ORIGIN: https://storage.${DOMAIN:-sunriseadsacademy.com}
+    expose:
+      - "3001"
+    networks:
+      - edge
+      - backend
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+
+  api:
+    image: sunrise-academy-api:${IMAGE_TAG:-latest}
+    build:
+      context: ..
+      dockerfile: apps/api/Dockerfile
+    restart: unless-stopped
+    <<: *api-environment
+    expose:
+      - "3000"
+    networks:
+      - backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      storage-init:
+        condition: service_completed_successfully
+      clamav:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/v1/health/ready').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 8s
+      retries: 12
+      start_period: 45s
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+
+  worker:
+    image: sunrise-academy-api:${IMAGE_TAG:-latest}
+    restart: unless-stopped
+    command: ["node", "apps/api/dist/worker.js"]
+    <<: *api-environment
+    networks:
+      - backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      storage-init:
+        condition: service_completed_successfully
+      clamav:
+        condition: service_started
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    security_opt:
+      - no-new-privileges:true
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    command: ["sh", "-c", "exec redis-server --appendonly yes --requirepass \"$$REDIS_PASSWORD\""]
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli -a \"$${REDIS_PASSWORD}\" ping | grep PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    security_opt:
+      - no-new-privileges:true
+
+  minio:
+    image: minio/minio:latest
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    expose:
+      - "9000"
+      - "9001"
+    networks:
+      - edge
+      - backend
+    security_opt:
+      - no-new-privileges:true
+
+  storage-init:
+    image: minio/mc:latest
+    restart: "no"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      OBJECT_STORAGE_PREFIX: ${OBJECT_STORAGE_PREFIX}
+    entrypoint:
+      - /bin/sh
+      - -ec
+      - |
+        until mc alias set sunrise http://minio:9000 "$$MINIO_ROOT_USER" "$$MINIO_ROOT_PASSWORD"; do sleep 2; done
+        for bucket in public-media learning-private submissions identity-private exports quarantine; do
+          mc mb --ignore-existing "sunrise/$${OBJECT_STORAGE_PREFIX}-$${bucket}"
+          mc anonymous set none "sunrise/$${OBJECT_STORAGE_PREFIX}-$${bucket}"
+          mc version enable "sunrise/$${OBJECT_STORAGE_PREFIX}-$${bucket}"
+        done
+        mc ilm rule add --expire-days 30 "sunrise/$${OBJECT_STORAGE_PREFIX}-exports" || true
+        mc ilm rule add --expire-days 30 "sunrise/$${OBJECT_STORAGE_PREFIX}-quarantine" || true
+    networks:
+      - backend
+    depends_on:
+      minio:
+        condition: service_started
+    security_opt:
+      - no-new-privileges:true
+
+  clamav:
+    image: clamav/clamav:stable
+    restart: unless-stopped
+    volumes:
+      - clamav_data:/var/lib/clamav
+    expose:
+      - "3310"
+    networks:
+      - backend
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  edge:
+  backend:
+    internal: true
+
+volumes:
+  caddy_data:
+  caddy_config:
+  postgres_data:
+  redis_data:
+  minio_data:
+  clamav_data:
